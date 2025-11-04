@@ -1,0 +1,164 @@
+{
+  "rooms": {
+    "lab": {
+      "class": "room",
+      "spatial_properties": { "can_contain": true, "can_be_contained": false },
+      "aliases": ["laboratory"]
+    },
+    "classroom": {
+      "class": "room",
+      "spatial_properties": { "can_contain": true, "can_be_contained": false },
+      "aliases": ["class_room"]
+    },
+    "hallway": {
+      "class": "room",
+      "spatial_properties": { "can_contain": true, "can_be_contained": false },
+      "aliases": ["corridor"]
+    },
+    "library": {
+      "class": "room",
+      "spatial_properties": { "can_contain": true, "can_be_contained": false },
+      "aliases": []
+    }
+  },
+
+  "objects": {
+    "board": {
+      "class": "fixture",
+      "common_locations": ["classroom"],
+      "spatial_properties": { "can_be_on_top": false, "can_contain": false, "can_be_contained": true },
+      "aliases": ["noticeboard", "whiteboard"]
+    },
+    "book": {
+      "class": "item",
+      "common_locations": ["lab", "library"],
+      "spatial_properties": { "can_be_on_top": false, "can_contain": false, "can_be_contained": true },
+      "aliases": ["textbook"]
+    },
+    "books": {
+      "class": "item",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": ["book_stack"]
+    },
+    "chair": {
+      "class": "furniture",
+      "common_locations": ["library"],
+      "spatial_properties": { "can_be_on_top": false, "can_contain": false, "can_be_contained": true },
+      "aliases": ["seat"]
+    },
+    "counter": {
+      "class": "furniture",
+      "common_locations": ["library"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": ["countertop", "service_counter"]
+    },
+    "desk": {
+      "class": "furniture",
+      "common_locations": ["lab", "classroom", "library"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": ["table", "workstation"]
+    },
+    "door": {
+      "class": "fixture",
+      "common_locations": ["lab", "classroom", "library"],
+      "spatial_properties": { "can_be_on_top": false, "can_contain": false, "can_be_contained": false },
+      "state_properties": { "possible_states": ["open", "close"], "default_state": "close" },
+      "aliases": []
+    },
+    "laptop": {
+      "class": "electronics",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": false, "can_contain": false, "can_be_contained": true },
+      "state_properties": { "possible_states": ["on", "off"], "default_state": "off" },
+      "aliases": ["notebook"]
+    },
+    "monitor": {
+      "class": "electronics",
+      "common_locations": ["library"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "state_properties": { "possible_states": ["on", "off"], "default_state": "off" },
+      "aliases": ["display", "pc_monitor"]
+    },
+    "note": {
+      "class": "item",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": ["memo", "postit"]
+    },
+    "penholder": {
+      "class": "item",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": true, "can_be_contained": true },
+      "aliases": ["pen_holder", "pencil_cup"]
+    },
+    "pencil": {
+      "class": "item",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": []
+    },
+    "pinkhighlighter": {
+      "class": "item",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": ["highlighter_pink"]
+    },
+    "stapler": {
+      "class": "item",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": []
+    },
+    "switch": {
+      "class": "control",
+      "common_locations": ["lab", "classroom", "hallway", "library"],
+      "spatial_properties": { "can_be_on_top": false, "can_contain": false, "can_be_contained": true },
+      "state_properties": { "possible_states": ["on", "off"], "default_state": "off" },
+      "aliases": ["light"]
+    },
+    "tape": {
+      "class": "item",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": ["adhesive_tape"]
+    },
+    "thesispaper": {
+      "class": "item",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": ["paper", "report"]
+    },
+    "garbage": {
+      "class": "item",
+      "common_locations": ["classroom"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": ["trash", "waste", "rubbish", "litter"]
+    },
+    "tv": {
+      "class": "electronics",
+      "common_locations": ["classroom"],
+      "spatial_properties": { "can_be_on_top": false, "can_contain": false, "can_be_contained": true },
+      "state_properties": { "possible_states": ["on", "off"], "default_state": "off" },
+      "aliases": ["television", "monitor_display"]
+    },
+    "waterdispensor": {
+      "class": "appliance",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": ["water_dispenser", "watercooler"]
+    },
+    "yellowhighlighter": {
+      "class": "item",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": true, "can_contain": false, "can_be_contained": true },
+      "aliases": ["highlighter_yellow"]
+    },
+    "bin": {
+      "class": "container",
+      "common_locations": ["lab"],
+      "spatial_properties": { "can_be_on_top": false, "can_contain": true, "can_be_contained": true },
+      "aliases": ["trash_bin", "waste_bin"]
+    }
+  }
+}

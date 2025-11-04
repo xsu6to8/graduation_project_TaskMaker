@@ -1,0 +1,40 @@
+# Environment / Secrets
+.env
+
+# Python bytecode / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Local caches / DB / logs
+robot_cache.db
+*.log
+
+# Results and generated artifacts
+result_TaskMaker_robot/
+
+# Editors / IDE
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+.venv/
+venv/
+
+# Build / dist
+build/
+dist/
+*.egg-info/
+
+# Testing artifacts
+.pytest_cache/
+.coverage
+
+# Optional local data (uncomment if needed)
+# data/

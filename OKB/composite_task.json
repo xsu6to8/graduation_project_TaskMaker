@@ -1,0 +1,523 @@
+{
+  "composite_tasks": {
+    "clean_desk": {
+      "description": "Clean and organize the desk workspace",
+      "keywords": ["clean", "organize", "tidy", "desk", "workspace"],
+      "primitive_sequence": [
+        "move('desk')",
+        "pick('book')",
+        "place('book', 'chair')",
+        "pick('laptop')", 
+        "place('laptop', 'desk')"
+      ],
+      "estimated_time": 120,
+      "category": "organization"
+    },
+    "setup_presentation": {
+      "description": "Prepare presentation equipment in classroom",
+      "keywords": ["setup", "prepare", "presentation", "demo", "classroom"],
+      "primitive_sequence": [
+        "move('classroom_01')",
+        "pick('laptop')",
+        "place('laptop', 'desk')",
+        "switchon('laptop')",
+        "switchon('tv')"
+      ],
+      "estimated_time": 180,
+      "category": "preparation"
+    },
+    "study_session": {
+      "description": "Set up study environment with books and laptop",
+      "keywords": ["study", "learn", "read", "research", "session"],
+      "primitive_sequence": [
+        "move('lab_01')",
+        "pick('book')",
+        "place('book', 'desk')",
+        "pick('laptop')",
+        "place('laptop', 'desk')",
+        "switchon('laptop')"
+      ],
+      "estimated_time": 150,
+      "category": "academic"
+    },
+    "break_time": {
+      "description": "Take a break and watch TV",
+      "keywords": ["break", "rest", "relax", "watch", "tv"],
+      "primitive_sequence": [
+        "move('lab_02')",
+        "switchon('tv')",
+        "move('chair')"
+      ],
+      "estimated_time": 60,
+      "category": "leisure"
+    },
+    "patrol_all_labs": {
+      "description": "Comprehensive patrol of all laboratory areas",
+      "keywords": ["patrol", "inspect", "check", "monitor", "security"],
+      "primitive_sequence": [
+        "move('lab_01')",
+        "move('lab_02')",
+        "move('classroom_01')",
+        "move('hallway_01')",
+        "move('lab_01')"
+      ],
+      "estimated_time": 300,
+      "category": "security"
+    },
+    "organize_workspace": {
+      "description": "Organize and arrange all workspace items",
+      "keywords": ["organize", "arrange", "sort", "workspace", "items"],
+      "primitive_sequence": [
+        "move('desk')",
+        "pick('book')",
+        "place('book', 'desk')",
+        "pick('laptop')",
+        "place('laptop', 'chair')",
+        "move('chair')"
+      ],
+      "estimated_time": 200,
+      "category": "organization"
+    },
+    "prepare_meeting": {
+      "description": "Prepare meeting room with necessary equipment",
+      "keywords": ["prepare", "meeting", "conference", "setup", "room"],
+      "primitive_sequence": [
+        "move('classroom_01')",
+        "pick('chair')",
+        "place('chair', 'desk')",
+        "pick('laptop')",
+        "place('laptop', 'desk')",
+        "switchon('laptop')",
+        "switchon('tv')"
+      ],
+      "estimated_time": 240,
+      "category": "preparation"
+    },
+    "shutdown_equipment": {
+      "description": "Safely shutdown all electronic equipment",
+      "keywords": ["shutdown", "turn off", "close", "power down", "equipment"],
+      "primitive_sequence": [
+        "move('desk')",
+        "switchoff('laptop')",
+        "move('tv')",
+        "switchoff('tv')"
+      ],
+      "estimated_time": 90,
+      "category": "maintenance"
+    },
+    "collect_books": {
+      "description": "Gather all books from different locations",
+      "keywords": ["collect", "gather", "books", "library", "reading"],
+      "primitive_sequence": [
+        "move('lab_01')",
+        "pick('book')",
+        "move('lab_02')",
+        "pick('book')",
+        "move('classroom_01')",
+        "place('book', 'desk')",
+        "place('book', 'desk')"
+      ],
+      "estimated_time": 180,
+      "category": "organization"
+    },
+    "tech_check": {
+      "description": "Check all technology equipment functionality",
+      "keywords": ["check", "test", "technology", "equipment", "functionality"],
+      "primitive_sequence": [
+        "move('lab_01')",
+        "switchon('laptop')",
+        "switchoff('laptop')",
+        "move('lab_02')",
+        "switchon('tv')",
+        "switchoff('tv')",
+        "move('classroom_01')",
+        "switchon('laptop')",
+        "switchoff('laptop')"
+      ],
+      "estimated_time": 300,
+      "category": "maintenance"
+    },
+    "bring_laptop_to_class": {
+      "description": "Bring laptop from lab to classroom for presentation",
+      "keywords": ["bring", "laptop", "class", "classroom", "presentation", "carry", "take"],
+      "primitive_sequence": [
+        "move('lab_01')",
+        "pick('laptop')",
+        "move('classroom_01')",
+        "place('laptop', 'desk')"
+      ],
+      "estimated_time": 120,
+      "category": "transport"
+    },
+    "prepare_for_lesson": {
+      "description": "Prepare everything needed for a lesson",
+      "keywords": ["prepare", "lesson", "class", "ready", "everything"],
+      "primitive_sequence": [
+        "move('classroom_01')",
+        "pick('laptop')",
+        "place('laptop', 'desk')",
+        "switchon('laptop')",
+        "switchon('tv')",
+        "pick('book')",
+        "place('book', 'desk')"
+      ],
+      "estimated_time": 180,
+      "category": "preparation"
+    },
+    "end_of_day_shutdown": {
+      "description": "End of day shutdown procedure for all equipment",
+      "keywords": ["end", "day", "shutdown", "close", "finish", "power down"],
+      "primitive_sequence": [
+        "move('lab_01')",
+        "switchoff('laptop')",
+        "move('lab_02')", 
+        "switchoff('tv')",
+        "move('classroom_01')",
+        "switchoff('laptop')",
+        "switchoff('tv')"
+      ],
+      "estimated_time": 240,
+      "category": "maintenance"
+    },
+    "emergency_patrol": {
+      "description": "Emergency security patrol of all areas",
+      "keywords": ["emergency", "urgent", "security", "patrol", "check", "alert"],
+      "primitive_sequence": [
+        "move('lab_01')",
+        "move('lab_02')",
+        "move('classroom_01')",
+        "move('hallway_01')",
+        "move('library')",
+        "move('lab_01')"
+      ],
+      "estimated_time": 180,
+      "category": "security"
+    },
+    "fetch_materials": {
+      "description": "Fetch study materials from various locations",
+      "keywords": ["fetch", "get", "materials", "supplies", "items", "collect"],
+      "primitive_sequence": [
+        "move('library')",
+        "pick('book')",
+        "move('lab_01')",
+        "pick('laptop')",
+        "move('desk')",
+        "place('book', 'desk')",
+        "place('laptop', 'desk')"
+      ],
+      "estimated_time": 150,
+      "category": "transport"
+    },
+    "daily_maintenance": {
+      "description": "Daily maintenance routine for lab equipment",
+      "keywords": ["daily", "maintenance", "routine", "upkeep", "care"],
+      "primitive_sequence": [
+        "move('lab_01')",
+        "switchon('laptop')",
+        "switchoff('laptop')",
+        "pick('book')",
+        "place('book', 'desk')",
+        "move('lab_02')",
+        "switchon('tv')",
+        "switchoff('tv')"
+      ],
+      "estimated_time": 200,
+      "category": "maintenance"
+    },
+    "setup_workspace": {
+      "description": "Set up a complete workspace for work",
+      "keywords": ["setup", "workspace", "arrange", "organize", "work"],
+      "primitive_sequence": [
+        "move('desk')",
+        "pick('laptop')",
+        "place('laptop', 'desk')",
+        "switchon('laptop')",
+        "pick('book')",
+        "place('book', 'desk')",
+        "move('chair')"
+      ],
+      "estimated_time": 120,
+      "category": "preparation"
+    },
+    "research_session": {
+      "description": "Set up for intensive research work",
+      "keywords": ["research", "study", "work", "intensive", "focus"],
+      "primitive_sequence": [
+        "move('library')",
+        "pick('book')",
+        "move('desk')",
+        "place('book', 'desk')",
+        "pick('laptop')",
+        "place('laptop', 'desk')",
+        "switchon('laptop')",
+        "move('chair')"
+      ],
+      "estimated_time": 180,
+      "category": "academic"
+    },
+    "give_presentation": {
+      "description": "Set up and give a presentation",
+      "keywords": ["presentation", "present", "show", "demo", "display"],
+      "primitive_sequence": [
+        "move('classroom_01')",
+        "pick('laptop')",
+        "place('laptop', 'desk')",
+        "switchon('laptop')",
+        "switchon('tv')",
+        "pick('book')",
+        "place('book', 'desk')"
+      ],
+      "estimated_time": 200,
+      "category": "presentation"
+    },
+    "write_thesis": {
+      "description": "Set up workspace for thesis writing with laptop and references",
+      "keywords": ["write", "thesis", "paper", "research", "writing"],
+      "primitive_sequence": [
+        "move('desk')",
+        "pick('laptop')",
+        "place('laptop', 'desk')",
+        "switchon('laptop')",
+        "pick('book')",
+        "place('book', 'desk')",
+        "pick('thesispaper')",
+        "place('thesispaper', 'desk')"
+      ],
+      "estimated_time": 180,
+      "category": "academic"
+    },
+    "clean_classroom": {
+      "description": "Clean up classroom after class session",
+      "keywords": ["clean", "classroom", "tidy", "after", "class"],
+      "primitive_sequence": [
+        "move('classroom')",
+        "pick('book')",
+        "place('book', 'counter')",
+        "switchoff('tv')",
+        "switchoff('laptop')",
+        "pick('laptop')",
+        "place('laptop', 'desk')"
+      ],
+      "estimated_time": 150,
+      "category": "organization"
+    },
+    "prepare_experiment": {
+      "description": "Set up lab workspace for experimental work",
+      "keywords": ["experiment", "prepare", "setup", "lab", "research"],
+      "primitive_sequence": [
+        "move('lab')",
+        "pick('laptop')",
+        "place('laptop', 'desk')",
+        "switchon('laptop')",
+        "pick('note')",
+        "place('note', 'desk')",
+        "pick('pencil')",
+        "place('pencil', 'penholder')"
+      ],
+      "estimated_time": 120,
+      "category": "academic"
+    },
+    "evening_security_check": {
+      "description": "Comprehensive evening security check of all areas",
+      "keywords": ["security", "evening", "check", "patrol", "night"],
+      "primitive_sequence": [
+        "move('lab')",
+        "switchoff('laptop')",
+        "switchoff('monitor')",
+        "move('classroom')",
+        "switchoff('tv')",
+        "close('door')",
+        "move('library')",
+        "switchoff('monitor')",
+        "move('hallway')"
+      ],
+      "estimated_time": 300,
+      "category": "security"
+    },
+    "organize_books": {
+      "description": "Organize and arrange books in proper locations",
+      "keywords": ["organize", "books", "arrange", "library", "sort"],
+      "primitive_sequence": [
+        "move('library')",
+        "pick('book')",
+        "place('book', 'counter')",
+        "move('lab')",
+        "pick('book')",
+        "place('book', 'counter')",
+        "move('classroom')",
+        "pick('book')",
+        "place('book', 'counter')"
+      ],
+      "estimated_time": 180,
+      "category": "organization"
+    },
+    "setup_study_group": {
+      "description": "Prepare workspace for group study session",
+      "keywords": ["study", "group", "prepare", "setup", "meeting"],
+      "primitive_sequence": [
+        "move('library')",
+        "pick('chair')",
+        "place('chair', 'desk')",
+        "pick('book')",
+        "place('book', 'desk')",
+        "pick('laptop')",
+        "place('laptop', 'desk')",
+        "switchon('laptop')"
+      ],
+      "estimated_time": 140,
+      "category": "academic"
+    },
+    "document_review": {
+      "description": "Review and organize documents and papers",
+      "keywords": ["review", "document", "paper", "check", "organize"],
+      "primitive_sequence": [
+        "move('desk')",
+        "pick('thesispaper')",
+        "place('thesispaper', 'desk')",
+        "pick('book')",
+        "place('book', 'desk')",
+        "pick('note')",
+        "place('note', 'desk')",
+        "pick('pencil')",
+        "place('pencil', 'desk')"
+      ],
+      "estimated_time": 120,
+      "category": "academic"
+    },
+    "visitor_tour": {
+      "description": "Give a tour to visitors showing lab facilities",
+      "keywords": ["tour", "visitor", "show", "guide", "lab"],
+      "primitive_sequence": [
+        "move('lab')",
+        "switchon('laptop')",
+        "move('classroom')",
+        "switchon('tv')",
+        "move('library')",
+        "switchon('monitor')",
+        "pick('book')",
+        "place('book', 'counter')"
+      ],
+      "estimated_time": 200,
+      "category": "presentation"
+    },
+    "backup_data": {
+      "description": "Backup important data and documents safely",
+      "keywords": ["backup", "data", "save", "secure", "copy"],
+      "primitive_sequence": [
+        "move('lab')",
+        "pick('laptop')",
+        "place('laptop', 'desk')",
+        "switchon('laptop')",
+        "pick('thesispaper')",
+        "place('thesispaper', 'desk')",
+        "switchoff('laptop')",
+        "pick('laptop')",
+        "place('laptop', 'counter')"
+      ],
+      "estimated_time": 160,
+      "category": "maintenance"
+    },
+    "morning_setup": {
+      "description": "Morning preparation and equipment startup",
+      "keywords": ["morning", "start", "setup", "begin", "prepare"],
+      "primitive_sequence": [
+        "move('lab')",
+        "switchon('laptop')",
+        "switchon('monitor')",
+        "move('classroom')",
+        "switchon('tv')",
+        "open('door')",
+        "move('library')",
+        "switchon('monitor')"
+      ],
+      "estimated_time": 180,
+      "category": "preparation"
+    },
+    "take_notes": {
+      "description": "Set up for note-taking during lecture or meeting",
+      "keywords": ["notes", "write", "record", "lecture", "meeting"],
+      "primitive_sequence": [
+        "move('desk')",
+        "pick('note')",
+        "place('note', 'desk')",
+        "pick('pencil')",
+        "place('pencil', 'desk')",
+        "pick('book')",
+        "place('book', 'desk')",
+        "pick('laptop')",
+        "place('laptop', 'desk')"
+      ],
+      "estimated_time": 100,
+      "category": "academic"
+    },
+    "equipment_maintenance": {
+      "description": "Routine maintenance check of electronic equipment",
+      "keywords": ["maintenance", "check", "equipment", "inspect", "service"],
+      "primitive_sequence": [
+        "move('lab')",
+        "switchon('laptop')",
+        "switchoff('laptop')",
+        "switchon('monitor')",
+        "switchoff('monitor')",
+        "move('classroom')",
+        "switchon('tv')",
+        "switchoff('tv')"
+      ],
+      "estimated_time": 200,
+      "category": "maintenance"
+    },
+    "prepare_materials": {
+      "description": "Gather and prepare materials for class or meeting",
+      "keywords": ["prepare", "materials", "gather", "collect", "ready"],
+      "primitive_sequence": [
+        "move('lab')",
+        "pick('book')",
+        "place('book', 'counter')",
+        "pick('note')",
+        "place('note', 'counter')",
+        "pick('pencil')",
+        "place('pencil', 'counter')",
+        "pick('thesispaper')",
+        "place('thesispaper', 'counter')"
+      ],
+      "estimated_time": 120,
+      "category": "preparation"
+    },
+    "end_session": {
+      "description": "End work session and properly store all items",
+      "keywords": ["end", "finish", "close", "store", "session"],
+      "primitive_sequence": [
+        "switchoff('laptop')",
+        "pick('laptop')",
+        "place('laptop', 'counter')",
+        "pick('book')",
+        "place('book', 'counter')",
+        "pick('note')",
+        "place('note', 'counter')",
+        "switchoff('monitor')",
+        "close('door')"
+      ],
+      "estimated_time": 140,
+      "category": "organization"
+    }
+  },
+  "metadata": {
+    "version": "3.0",
+    "total_tasks": 32,
+    "last_updated": "2024-01-15",
+    "categories": [
+      "organization",
+      "preparation", 
+      "academic",
+      "leisure",
+      "security",
+      "maintenance",
+      "transport",
+      "presentation"
+    ],
+    "environment": {
+      "spaces": ["lab", "classroom", "library", "hallway"],
+      "objects": ["tv", "chair", "desk", "laptop", "book", "monitor", "note", "pencil", "thesispaper", "penholder", "counter", "door"]
+    }
+  }
+}

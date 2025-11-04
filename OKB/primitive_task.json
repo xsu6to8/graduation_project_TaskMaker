@@ -1,0 +1,102 @@
+{
+  "primitive_tasks": {
+    "move": {
+      "task_type": "navigation",
+      "patterns": [
+        "move to ~",
+        "go to ~",
+        "navigate to ~"
+      ],
+      "required_objects": 1,
+      "spatial_relations": ["to"],
+      "common_objects": ["lab_01", "lab_02", "classroom_01", "hallway_01", "desk", "chair"],
+      "field_priority": {
+        "primary": "target",
+        "secondary": null,
+        "merge_destination_to_target": true
+      }
+    },
+    "pick": {
+      "task_type": "manipulation",
+      "patterns": [
+        "pick up ~",
+        "grab ~",
+        "take ~"
+      ],
+      "required_objects": 1,
+      "spatial_relations": [],
+      "common_objects": ["laptop", "book", "chair"],
+      "field_priority": {
+        "primary": "target",
+        "secondary": null,
+        "merge_destination_to_target": true
+      }
+    },
+    "place": {
+      "task_type": "manipulation",
+      "patterns": [
+        "place ~ on ~",
+        "put ~ on ~",
+        "place ~ in ~"
+      ],
+      "required_objects": 2,
+      "spatial_relations": ["on", "in"],
+      "common_objects": {
+        "object1": ["laptop", "book"],
+        "object2": ["desk", "chair"]
+      },
+      "field_priority": {
+        "primary": "target",
+        "secondary": "destination",
+        "merge_destination_to_target": false
+      }
+    },
+    "open": {
+      "task_type": "manipulation",
+      "patterns": [
+        "open ~",
+        "open the ~"
+      ],
+      "required_objects": 1,
+      "spatial_relations": [],
+      "common_objects": ["laptop", "book"],
+      "field_priority": {
+        "primary": "target",
+        "secondary": null,
+        "merge_destination_to_target": true
+      }
+    },
+    "switchon": {
+      "task_type": "manipulation",
+      "patterns": [
+        "turn on ~",
+        "turn on the ~",
+        "switch on ~"
+      ],
+      "required_objects": 1,
+      "spatial_relations": [],
+      "common_objects": ["tv", "laptop"],
+      "field_priority": {
+        "primary": "target",
+        "secondary": null,
+        "merge_destination_to_target": true
+      }
+    },
+    "switchoff": {
+      "task_type": "manipulation",
+      "patterns": [
+        "turn off ~",
+        "turn off the ~",
+        "switch off ~"
+      ],
+      "required_objects": 1,
+      "spatial_relations": [],
+      "common_objects": ["tv", "laptop"],
+      "field_priority": {
+        "primary": "target",
+        "secondary": null,
+        "merge_destination_to_target": true
+      }
+    }
+  }
+}
